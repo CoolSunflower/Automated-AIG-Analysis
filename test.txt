@@ -1,0 +1,6 @@
+source -s abc.rc
+read_bench abc/project/bc0_orig.bench
+strash
+print_stats
+rewrite -z
+print_stats

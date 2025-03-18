@@ -1,0 +1,46 @@
+read_bench abc/project/bc0_orig.bench
+source -s abc/abc.rc
+strash
+print_stats
+refactor
+print_stats
+resub -z
+print_stats
+rewrite -z
+print_stats
+refactor
+print_stats
+resub -z
+print_stats
+resub
+print_stats
+refactor
+print_stats
+resub -z
+print_stats
+resub
+print_stats
+resub -z
+print_stats
+refactor
+print_stats
+refactor -z
+print_stats
+rewrite
+print_stats
+balance
+print_stats
+rewrite -z
+print_stats
+resub -z
+print_stats
+refactor
+print_stats
+resub -z
+print_stats
+resub
+print_stats
+rewrite
+print_stats
+write_bench -l bc0/updatedAIG/668.bench
+dch
