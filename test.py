@@ -11,7 +11,7 @@ import threading
 import io
 
 DESIGN_NAME = "fpu"  # Updated to match your output
-DESIGN_LOCATION = f"abc/project/{DESIGN_NAME}_orig.bench"
+DESIGN_LOCATION = f"./abc/project/{DESIGN_NAME}_orig.bench"
 SCRIPT_LOCATION = DESIGN_NAME + "/" + "scripts"
 UPDATES_AIG_LOCATION = DESIGN_NAME + "/" + "updatedAIG"
 OUTPUT_LOCATION = DESIGN_NAME + "/" + "outputs"
@@ -151,7 +151,7 @@ def process_file(i, buffer_manager):
             f.write("dch\n")
         
         # Execute script
-        subprocess.run(f"abc/abc -f {script_file_path} > {output_file_path}", shell=True)
+        subprocess.run(f"./abc/abc -f {script_file_path} > {output_file_path}", shell=True)
         
         # Parse output
         commands, and_counts, levels = parse_output(output_file_path, commands)
